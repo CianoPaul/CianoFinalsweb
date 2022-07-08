@@ -1,0 +1,34 @@
+{% extends 'templates.html' %}
+{% block content %}
+
+<div class="forreview">
+	<p> Summary </p>
+</div>
+
+<form>
+	<center>
+<table class="mytable">
+	<thead>
+		<tr class="table1">
+			<th> Surname </th>
+			<th> First Name </th>
+			<th> Contact </th>
+			<th> Intensity </th>
+			<th> Focus </th>
+			<th> Diet Plan </th>
+			<th> Trainer </th>
+			<th>  </th>
+		</tr>
+	</thead>
+	</center>
+
+	{% for review in NewStorage%}
+	<tbody>
+		<td>{{review.sname}}</td>
+		<td>{{review.fname}}</td>
+		<td>{{review.contact}}</td>
+		<td>          
+			<a type='button' href="{% url 'edit' item.pk%}" > Edit</a> 
+		  </td>
+	</tbody>
+

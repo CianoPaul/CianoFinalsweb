@@ -1,0 +1,54 @@
+{% extends 'templates.html' %}
+{% block content %}
+			<form method="POST">
+			<h1 class="header2"> Exercise Plan </h1>
+			<br>
+
+			<div class="container2">
+				<div class="intensity">
+		   		<label for="Drop">Please choose your workout intensity.</label>
+		   		<br>
+		   		<div>
+		   			<select name="intensity" id="intensityddid" required="true">
+		   				<option value="LOW" id="low"> LOW </option>
+		   				<option value="MODERATE" id="moderate"> MODERATE </option>
+		   				<option value="VIGOROUS" id="vigorous"> VIGOROUS </option>
+		   			</select>
+		   		</div>
+		   		<br>
+
+		   		<div class="checkbox1">
+		   		<label> Please choose the focus of your workout. </label>
+		   		<br>
+		   		<div>
+		   			<input type="radio" id="focus1id" name="focus" value="Calves (lower leg)">
+		   			<label for="focus1id"> Calves (lower leg) </label> <br>
+		   			<input type="radio" id="focus2id" name="focus" value="Hamstrings (back of upper leg)">
+		   			<label for="focus2id"> Hamstrings (back of upper leg) </label> <br>
+		   			<input type="radio" id="focus3id" name="focus" value="Quadriceps (front of upper leg)">
+		   			<label for="focus3id"> Quadriceps (front of upper leg) </label> <br>
+		   			<input type="radio" id="focus4id" name="focus" value="Glutes (butt and hips)">
+		   			<label for="focus4id"> Glutes (butt and hips) </label> <br>
+		   			<input type="radio" id="focus5id" name="focus" value="Biceps (front of upper arms)">
+		   			<label for="focus5id"> Biceps (front of upper arms) </label> <br>
+		   			<input type="radio" id="focus6id" name="focus" value="Triceps (back of upper arms)">
+		   			<label for="focus6id"> Triceps (back of upper arms) </label> <br>
+		   			<input type="radio" id="focus7id" name="focus" value="Forearms (lower arms)">
+		   			<label for="focus7id"> Forearms (lower arms) </label> <br>
+		   			<input type="radio" id="focus8id" name="focus" value="Trapezius (traps) (top of shoulders)">
+		   			<label for="focus8id"> Trapezius (traps) (top of shoulders) </label> <br>
+		   			<input type="radio" id="focus9id" name="focus" value="Latissimus dorsi (lats) (under the armpits)">
+		   			<label for="focus9id"> Latissimus dorsi (lats) (under the armpits) </label> 
+		   			<br>
+		   		</div>
+		   		<br>
+
+		   		<div class="button2">
+		   			<input id="btnConfirm" type="submit" value="Confirm" />
+		   		</div>
+
+		   		{% csrf_token %}
+
+		   	</div>
+	   	</div>
+	{% endblock %}

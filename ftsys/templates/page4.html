@@ -1,0 +1,110 @@
+{% extends 'templates.html' %}
+{% block content %}
+			<form method="POST">
+			<h1 class="header3">Products</h1>
+			<br>
+
+			<div class="container4">
+				<div class="checkbox3">
+				<h2 class="access"><b> Accessories </b></h2>
+					<br>
+			   		<label> Gym Bag </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="bag1id" name="bag" value="worldb Php 999">
+			   			<label for="bag1id"> World Balance Gym Bag (Php 999) </label> <br>
+			   			<input type="radio" id="bag2id" name="bag" value="adven Php 999">
+			   			<label for="bag2id"> The Adventure (Php 999) </label> <br>
+			   			<input type="radio" id="bag3id" name="bag" value="puma Php 2,579">
+			   			<label for="bag3id"> Puma Gym Bag (Php 2,579) </label> <br>
+			   			<input type="radio" id="bag4id" name="bag" value="hummel Php 1,445">
+			   			<label for="bag4id"> Hummel (Php 1,445) </label> <br>
+			   			<input type="radio" id="bag5id" name="bag" value="UA Php 2,195">
+			   			<label for="bagid"> Under Armour Gym Bag (Php 2,195)</label> 
+			   			<br>
+			   		</div>
+			   		<br>
+
+			   		<div class="checkbox4">
+			   		<label> Exercise Mat </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="mat1id" name="mat" value="matpink Php 278">
+			   			<label for="mat1id"> Exercise Mat Pink (Php 278) </label> <br>
+			   			<input type="radio" id="mat2id" name="mat" value="matgreen Php 278">
+			   			<label for="mat2id"> Exercise Mat Green (Php 278) </label> <br>
+			   			<input type="radio" id="mat3id" name="mat" value="matred Php 278">
+			   			<label for="mat3id"> Exercise Mat Red (Php 278) </label> <br>
+			   			<input type="radio" id="mat4id" name="mat" value="matblack Php 278">
+			   			<label for="mat4id"> Exercise Mat Black (Php 278) </label> 
+			   			<br>
+			   		</div>
+			   		<br>
+
+			   		<div class="checkbox5">
+			   		<label> Others </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="RB1id" name="RB" value="resistance Php 499">
+			   			<label for="RB1id"> Resistance Band Complete Set (Php 499) </label> <br>
+			   			<input type="radio" id="RR2id" name="RB" value="Rumble Php 349">
+			   			<label for="RR2id"> Rumblerollers (Php 349) </label> <br>
+			   			<input type="radio" id="GT3id" name="RB" value="gymtowel Php 299">
+			   			<label for="GT3id"> Microfibre Gym Towels 3pcs (Php 299) </label> <br>
+			   			<input type="radio" id="masj4id" name="RB" value="masjball Php 279">
+			   			<label for="masj4id"> Massage Ball (Php 279) </label> 
+			   			<br>
+			   		</div>
+			   		<br>
+
+			   		<div class="checkbox6">
+					<h2 class="supp"><b> Supplements </b></h2>
+					<br>
+			   		<label> Protein Powders </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="whey1id" name="whey" value="JUST whey Php 785">
+			   			<label for="whey1id"> JUST Whey 1lb (Php 785) </label> <br>
+			   			<input type="radio" id="whey2id" name="whey" value="ON whey Php 1,999">
+			   			<label for="whey2id"> The ON High Protein Powder 6lbs (Php 1,999) </label> <br>
+			   			<input type="radio" id="whey3id" name="whey" value="carnivor Php 2,499">
+			   			<label for="whey3id"> Carnivor Mass 6lbs (Php 2,499) </label> <br>
+			   			<input type="radio" id="whey4id" name="whey" value="prothin Php 1,600">
+			   			<label for="whey4id"> Prothin Whey 3lbs (Php 1,600) </label> 
+			   			<br>
+			   		</div>
+			   		<br>
+
+			   		<div class="checkbox7">
+			   		<label> Weight Loss Supplements </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="loss1id" name="loss" value="Hydroxycut Php 1,199">
+			   			<label for="loss1id"> Hydroxycut 100 rapid release thermo caps(Php 1,199) </label> <br>
+			   			<input type="radio" id="loss2id" name="loss" value="Coffee Extract Php 499">
+			   			<label for="loss2id"> Fatsorb Green Coffee Extract 500mg (Php 499) </label> <br>
+			   			<input type="radio" id="loss3id" name="loss" value="orlistat Php 349">
+			   			<label for="loss3id"> Orlistat 500mg (Php 349) </label> 
+			   			<br>
+			   		</div>
+			   		<br>
+
+			   		<div class="locker">
+			   		<label for="Drop">Would you like to avail for our lockers?</label>
+			   		<br>
+			   		<div>
+			   			<select name="choice" id="choice1id">
+			   				<option value="yes" id="yesid"> Yes </option>
+			   				<option value="no" id="noid"> No </option>
+			   			</select>
+			   		</div>
+			   		<br>
+
+			   		<div class="button4">
+			   			<input id="btnConfirm" type="submit" value="Confirm" />
+			   		</div>
+			   		{% csrf_token %}
+
+			   	</div>
+			</div>
+	{% endblock %}

@@ -1,0 +1,137 @@
+{% extends 'templates.html' %}
+{% block content %}
+<!-- 	<form method="POST">
+		<div class="container5">
+			<table class="contenttable">
+				<h1 class="rev"> Review </h1>
+
+			<center>
+			<fieldset class ="field">	
+				<legend> <b> Basic Information </b> </legend>
+
+				{% for review in NewStorage %}
+
+				<label>Surname: </label>
+				<li> {{review.sname}} </li>
+				{% endfor %}
+				<br>
+
+				<label>First Name: </label>
+				<li type="text" name="result" id="fnameresult"> </li>
+				<br>
+				<label>Age: </label>
+				<li> </li>
+				<br>
+				<label>Contact: </label>
+				<li> </li>
+			</fieldset>
+			</center>
+			<br>
+
+			<center>
+			<fieldset class ="field2">	
+				<legend> <b> Exercise Plan </b> </legend>
+				<label>Intensity: </label>
+				<li> </li> 
+				<br>
+				<label>Focus: </label>
+				<li> </li>
+			</fieldset>
+			</center>
+			<br>
+
+			<center>
+			<fieldset class ="field2">	
+				<legend> <b> Program </b> </legend>
+				<label>Diet Plan: </label>
+				<li> </li>
+				<br>
+				<label>Trainer: </label>
+				<li> </li>
+				<br>
+				<label>Duration: </label>
+				<li> </li>
+			</fieldset>
+			</center>
+			<br>
+
+			<center>
+			<fieldset class ="field2">	
+				<legend> <b> Products </b> </legend>
+				<label>Gym Bag: </label>
+				<li> </li>
+				<br>
+				<label>Exercise mat: </label>
+				<li> </li>
+				<br>
+				<label>Others: </label>
+				<li> </li>
+				<br>
+				<label>Protein Powders: </label>
+				<li> </li>
+				<br>
+				<label>Weight Loss Supplements: </label>
+				<li> </li>
+				<br>
+				<label>Locker: </label>
+				<li> </li>
+			</fieldset>
+			</center>
+			<br>	
+		</div> -->
+
+			<!-- 	{% for review in NewStorage %}
+				{{review.sname}}
+			
+				{% for review1 in planstorage%}
+				{{review1.intensity}} 
+		
+				{% for review2 in programstorage %}
+				{{review2.DietPlan}} 
+			
+				{% for review3 in productstorage %}
+				{{review3.protein}}
+			
+				{% endfor %}
+				{% endfor %}
+				{% endfor %}
+				{% endfor %} -->
+
+			<!-- table -->
+
+			<
+
+<div class="title">
+	<p> Summary </p>
+</div>
+
+<form>
+	<center>
+<table class="mytable">
+	<thead>
+		<tr class="table1">
+			<th> protein </th>
+			<th> gymbags </th>
+			<th> mat </th>
+			<th> others </th>
+			<th> weight loss</th>
+			<th> lockers </th>
+		</tr>
+	</thead>
+	</center>
+	
+	{% for review in productstorage %}
+	<tbody>
+		<td>{{review.protein}}</td>
+		<a href="{% url 'delete' review.productID %}"> Remove </a>
+		<td>{{review.gymbags}}</td>
+		<td>{{review.mat}}</td>
+		<td>{{review.others}}</td>
+		<td>{{review.loss}}</td>
+		<td>{{review.locker}}</td>
+	</tbody>
+
+	{% endfor %}
+
+	{% csrf_token %}
+{% endblock %}

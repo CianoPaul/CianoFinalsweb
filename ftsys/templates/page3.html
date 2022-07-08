@@ -1,0 +1,62 @@
+{% extends 'templates.html' %}
+{% block content %}
+			<form method="POST">
+			<h1 class="header3">Diet Program</h1>
+			<br>
+
+			<div class="container3">
+				<div class="checkbox2">
+			   		<label> Please choose your diet plan. </label>
+			   		<br>
+			   		<div>
+			   			<input type="radio" id="diet1id" name="diet" value="Mediterranean Diet">
+			   			<label for="diet1id"> Mediterranean Diet (for disease prevention, wellness, and longevity.) </label> <br>
+			   			<input type="radio" id="diet2id" name="diet" value="DASH Diet">
+			   			<label for="diet2id"> DASH Diet (helps to prevent high blood pressure) </label> <br>
+			   			<input type="radio" id="diet3id" name="diet" value="Vegan Diet">
+			   			<label for="diet3id"> Vegan Diet </label> <br>
+			   			<input type="radio" id="diet4id" name="diet" value="Low Carb Diet">
+			   			<label for="diet4id"> Low Carb Diet (helps weight loss) </label> <br>
+			   			<input type="radio" id="diet5id" name="diet" value="Dukan Diet">
+			   			<label for="diet5id"> Dukan Diet (high protein, low carb diet)</label> <br>
+			   			<input type="radio" id="diet6id" name="diet" value="Zone Diet">
+			   			<label for="diet6id"> Zone Diet (limit carbs to 35-45%) </label> <br>
+			   			<input type="radio" id="diet7id" name="diet" value="HCG Diet">
+			   			<label for="diet7id"> HCG Diet (helps weight loss up to 1-2 pounds per day) </label> <br>
+			   			<input type="radio" id="diet8id" name="diet" value="Low Fat Diet">
+			   			<label for="diet8id"> Low Fat Diet (helps limits fat consumptions under 10% per day) </label> 
+			   		</div>
+			   		<br>
+
+			   		<div class="trainer">
+			   		<label for="Drop">Please choose your prefered trainer.</label>
+			   		<br>
+			   		<div>
+			   			<select name="trainer" id="trainerid" required="true">
+			   				<option value="Male" id="maleid"> MALE </option>
+			   				<option value="Female" id="femaleid"> FEMALE </option>
+			   			</select>
+			   		</div>
+			   		<br>
+
+			   		<div class="duration2">
+			   		<label for="Drop">Please choose how long you will be subscribing.</label>
+			   		<br>
+			   		<div>
+			   			<select name="date2" id="date2id" required="true">
+			   				<option value="3 Months" id="3months"> 3 MONTHS </option>
+			   				<option value="4 Months" id="4months"> 4 MONTHS </option>
+			   				<option value="5 Months" id="5months"> 5 MONTHS </option>
+			   				<option value="6 Months" id="6months"> 6 MONTHS </option>
+			   			</select>
+			   		</div>
+			   		<br>
+
+			   		<div class="button3">
+			   			<input id="btnConfirm" type="submit" value="Confirm" />
+			   		</div>
+			   		{% csrf_token %}
+
+			   	</div>
+			</div>
+	{% endblock %}

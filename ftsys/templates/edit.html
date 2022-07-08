@@ -1,0 +1,23 @@
+{% extends 'templates.html' %}
+{% load static %}
+{% block content %}
+<div >
+    <p>Edit  Information</p>
+</div>
+<form method="POST" action="">
+    {% csrf_token%} 
+<div>
+    <div> Last name: {{form.sname}}</div>
+    <div> First name: {{form.fname}}</div>
+    <div> Middle Name: {{form.mname}}</div>
+    <div> Age: {{form.age}}</div>
+    <div> Add: {{form.add}}</div>
+    <div> Disease: {{form.disease}}</div>
+    <div> Disease: {{form.specifydisease}}</div>
+    <div>Plan:{{form.plan}}</div>
+    <div>{{form.total}}</div>
+    <div>
+        <input type = "Submit" ></input>
+    </div>     
+</div>
+{% endblock %}

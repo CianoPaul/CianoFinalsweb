@@ -1,0 +1,344 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fitness-Talk</title>
+
+<style type="text/css">
+	.header1{
+		text-transform: uppercase;
+		text-align: center;
+		color: #ffffff;
+		font-family: Helvetica;
+	}
+	.header2{
+		text-transform: uppercase;
+		text-align: center;
+		color: #ffffff;
+		font-family: Helvetica;
+		padding-top: 20px;
+	}
+	.header3{
+		text-transform: uppercase;
+		text-align: center;
+		color: #ffffff;
+		font-family: Helvetica;
+		padding-top: 20px;
+	}
+
+	*{
+		padding: 0;
+		margin: 0;
+		text-decoration: none;
+		list-style: none;
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: arial;
+	}
+
+	.navlinks{
+		background: #0082e6;
+		height: 80px;
+		width: 100%;
+	}
+
+	label.logo{
+		color: white;
+		font-size: 35px;
+		line-height: 80px;
+		padding: 0 100px;
+		font-weight: bold;
+
+	}
+
+	header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 10%;
+	}
+
+	body {
+	background: #2c3e50;
+	padding: 0;
+	margin: 0;
+	}
+	.container{
+		width: 800px;
+		height: 520px;
+		margin: 100px auto;
+		background: #ffffff;
+		position: relative;
+		border-radius: 3%;
+	}
+	.container2{
+		width: 800px;
+		height: 320px;
+		margin: 100px auto;
+		background: #ffffff;
+		position: relative;
+		border-radius: 3%;
+	}
+	.container3{
+		width: 800px;
+		height: 360px;
+		margin: 100px auto;
+		background: #ffffff;
+		position: relative;
+		border-radius: 3%;
+	}
+	.container4{
+		width: 800px;
+		height: 770px;
+		margin: 100px auto;
+		background: #ffffff;
+		position: relative;
+		border-radius: 3%;
+	}
+	.container5{
+		width: 800px;
+		height: 1350px;
+		margin: 100px auto;
+		background: #ffffff;
+		position: relative;
+		border-radius: 3%;
+	}
+	
+
+	/*#page5*/
+
+	.contenttable{
+		border-collapse: collapse ;
+		margin: 25px 0;
+		font-size: 0.9em;
+		min-width: 400px;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+	.contenttable thead tr{
+		background-color: #009879;
+		color: #ffffff;
+		text-align: left;
+		font-weight: bold;
+	}
+	.contenttable th,
+	.contenttable td{
+		padding: 12px 15px;
+		text-align: center;
+	}
+	.contenttable tbody tr{
+		border-bottom: 1px solid #dddddd;
+	}
+	.contenttable tbody tr:nth-of-type(even) {
+		background-color: #f3f3f3;
+	}
+	.contenttable tbody tr:last-of-type {
+		border-bottom: 2px solid #009879;
+	}
+	.contenttable tbody tr.active-row {
+		font-weight: bold;
+		color: #009879;
+	}
+	.rev {
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		font-family: Courier;
+	}
+
+	/*end*/
+
+	.navlinks {
+		list-style: none;
+	}
+
+	.navlinks li {
+		display: inline-block;
+		padding: 0px 20px;
+		font-weight: bold;
+	}
+
+	.navlinks li a {
+		transition: all 0.3s ease 0s;
+		color: #ffffff;
+	}
+
+	.navlinks li a:hover {
+		color:  #000000;
+	}
+
+	@media (max-width: 952px) {
+		label.logo{
+			font-size: 30px;
+			padding-left: 50px;
+		}
+		nav ul li a{
+			font-size: 16px;
+		}
+	}
+	@media (max-width: 858px){
+	}
+
+	.BasicInformation{
+		padding-top: 20px;
+		text-align: left;
+		padding-left: 200px;
+	}
+	.dropdownquestion{
+		text-align: left;
+		padding-left: 200px;
+	}
+	.dropdownquestion2{
+		text-align: left;
+		padding-left: 200px;
+	}
+	.others{
+		text-align: left;
+		padding-left: 200px;
+	}
+	.total{
+		text-align: left;
+	}
+	.customerid{
+		text-align: center;
+	}
+	.button{
+		text-align: left;
+		padding-left: 170px;
+		padding-bottom: 20px;
+	}
+
+	/*exercise plan*/
+	.intensity{
+		padding-top: 20px;
+		text-align: left;
+		padding-left: 200px;
+	}
+	.checkbox1{
+		text-align: left;
+	}
+	.duration{
+		text-align: left;
+	}
+	.specifydate{
+		text-align: left;
+	}
+	.button2{
+		text-align: left;
+		padding-left: 170px;
+		padding-bottom: 20px;
+	}
+
+	/*Diet Program*/
+	.checkbox2{
+		text-align: left;
+		padding-top: 20px;
+		padding-left: 150px;
+	}
+	.button3{
+		text-align: left;
+		padding-left: 220px;
+		padding-bottom: 20px;
+	}
+	/*Products*/
+	.access{
+		padding-left: 100px;
+		padding-top: 20px;
+	}
+	.supp{
+		padding-left: 100px;
+	}
+	.checkbox3{
+		padding-left: 220px;
+	}
+	.button4{
+		padding-left: 150px;
+	}
+
+	/*Feedback*/
+	.field{
+		width: 50px;
+		font-family: Courier;
+		font-smooth: never;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
+	.field2{
+		width: 50px;
+		font-family: Courier;
+		font-smooth: never;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
+	legend{
+		font-size: 20px;
+		text-align: center;
+	}
+	/*end*/
+
+	/*table*/
+	.title{
+		text-align: center;
+		font-size: 40px;
+		color: #ffffff;
+		font-family: helvetica;
+	}
+	.mytable{
+		border-collapse: collapse;
+		margin: 30px 0;
+		font-size: 20px
+		min-width: 400px;
+		color: #ffffff;
+		border-radius: 5px 5px 0 0;
+		overflow: hidden;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	}
+	.mytable thead tr{
+		background-color: #009879;
+		color: #ffffff;
+		text-align: center;
+		font-weight: bold;
+	}
+	.mytable th,
+	.mytable td {
+		padding: 12px 15px;
+	}
+	.mytable tbody tr {
+		border-bottom: 1px solid #dddddd;
+	}
+	.mytable tbody tr:nth-of-type(even) {
+		background-color: #f3f3f3;
+	}
+	.mytable tbody tr:last-of-type{
+		border-bottom: 2px solid #009879;
+	}
+
+
+</style>
+
+</head>
+   	<nav>
+		<ul class="navlinks">
+			<label class="logo">Fitness-Talk</label>
+			<li><a href="/">Registration</a></li>
+			<li><a href="/Page2">Exercise Plan</a></li>
+			<li><a href="/Page3">Diet Program</a></li>
+			<li><a href="/Page4">Products</a></li>
+			<li><a href="/Page5">Feedback</a></li>
+		</ul>
+   	</nav>
+   		<!-- <a class="cta" href="#"><button>Contact</button> -->
+<body>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>
